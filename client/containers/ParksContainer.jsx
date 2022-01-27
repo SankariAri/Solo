@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import ParkCreator from '../components/ParkCreator.jsx';
-import ParksDisplay from '../components/ParksDisplay.jsx';
+import { useState, useEffect } from "react";
 import * as actions from '../actions/actions';
 import reducers from '../reducers/index.js';
+import ParksDisplay from '../components/ParksDisplay.jsx';
 
 const mapStateToProps = state => ({
  parkNames: state.parks.parkNames
@@ -19,7 +19,9 @@ const mapStateToProps = state => ({
   function ParksContainer (props) {
     const {parkNames, fetchParkInfo} = props;
    // look up useEffect 
-    fetchParkInfo()
+   useEffect(() => {
+     fetchParkInfo()
+   }, []);
     console.log('inside of ParksContainer: ', {props})
     return (
       <div className="innerbox"> 
