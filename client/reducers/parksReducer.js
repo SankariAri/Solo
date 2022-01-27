@@ -11,7 +11,9 @@ const parkReducer = (state = initialState, action) => {
         case types.PARK_INFO:
             console.log('----->',action.type, action.payload)
     for (let i=0; i<action.payload.parkData.data.length; i++) {
+        console.log('---->',action.payload.parkData.data[i])
         newParkNames.push(action.payload.parkData.data[i].fullName) 
+        // const = park{name:image:}
     }
     console.log({newParkNames})
            
@@ -26,10 +28,6 @@ const parkReducer = (state = initialState, action) => {
    }
 }
 
-// const urls = [];
-// for (let i=0; i<this.state.urls.length; i++) {
-//     urls.push(<FeedItem url={this.state.urls[i]}/>)
-// }
     }
 
 export default parkReducer;

@@ -18,6 +18,7 @@ const mapStateToProps = state => ({
 
   function ParksContainer (props) {
     const {parkNames, fetchParkInfo} = props; 
+    console.log({parkNames})
    useEffect(() => {
      fetchParkInfo()
    }, []);
@@ -26,7 +27,7 @@ const mapStateToProps = state => ({
 
    const parkNamesArray = []
    for (let i=0; i<parkNames.length; i++) {
-    parkNamesArray.push(<ParksDisplay name={parkNames[i]}/>)
+    parkNamesArray.push(<ParksDisplay name= {parkNames[i]}/>)
    }
   
     return (

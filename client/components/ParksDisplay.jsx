@@ -4,7 +4,8 @@ const ParksDisplay = props => {
     console.log(props)
     return (
         <div className="displayBox">
-        
+           <h3>{props.name}</h3> 
+
     </div>
     )
 }

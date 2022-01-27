@@ -1,12 +1,9 @@
 
-.outerBox {
-    max-width: 650px;
-    margin: 0 auto;
-    padding: 10px;
-    box-shadow: 10px 15px 39px rgba(0, 0, 0, .2);
-    border-radius: 5px;
+#header {
+    text-align: center;
+    letter-spacing: .2em;
+    margin-bottom: 10px;
 }
-
 
 .innerbox {
     padding: 10px;
@@ -17,7 +14,10 @@
 
 .displayBox {
     width: 300px;
+    height: 200px;
     border: 5px solid green;
     padding: 50px;
     margin: 20px;
+    align-items: center;
+   
 }
