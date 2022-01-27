@@ -5,10 +5,9 @@ import ParksDisplay from '../components/ParksDisplay.jsx';
 import * as actions from '../actions/actions';
 import reducers from '../reducers/index.js';
 
-const mapStateToProps = state => {
-    let newObj = {};
-    return newObj;
-  };
+const mapStateToProps = state => ({
+ parkNames: state.parks.parkNames
+  })
 
 
   const mapDispatchToProps = dispatch => (
@@ -17,10 +16,14 @@ const mapStateToProps = state => {
   
   });
 
-  function ParksContainer ({fetchParkInfo}) {
+  function ParksContainer (props) {
+    const {parkNames, fetchParkInfo} = props;
+   // look up useEffect 
     fetchParkInfo()
+    console.log('inside of ParksContainer: ', {props})
     return (
       <div className="innerbox"> 
+      {parkNames}
       <ParksDisplay/>
       </div>
     )
