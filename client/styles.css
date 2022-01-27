@@ -14,3 +14,10 @@
     margin: 40px auto;
     box-shadow: 5px 5px 15px rgba(80, 194, 99, 0.481);
 }
+
+.displayBox {
+    width: 300px;
+    border: 5px solid green;
+    padding: 50px;
+    margin: 20px;
+}

@@ -17,16 +17,21 @@ const mapStateToProps = state => ({
   });
 
   function ParksContainer (props) {
-    const {parkNames, fetchParkInfo} = props;
-   // look up useEffect 
+    const {parkNames, fetchParkInfo} = props; 
    useEffect(() => {
      fetchParkInfo()
    }, []);
-    console.log('inside of ParksContainer: ', {props})
+
+   // create empty array for park names to pass into display 
+
+   const parkNamesArray = []
+   for (let i=0; i<parkNames.length; i++) {
+    parkNamesArray.push(<ParksDisplay name={parkNames[i]}/>)
+   }
+  
     return (
       <div className="innerbox"> 
-      {parkNames}
-      <ParksDisplay/>
+      {parkNamesArray}
       </div>
     )
   }
