@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import ParksContainer from './ParksContainer.jsx';
 
 
-
 function MainContainer () {
    return (
     <div className="container">
