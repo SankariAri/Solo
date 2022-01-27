@@ -6,7 +6,7 @@ import reducers from '../reducers/index.js';
 import ParksDisplay from '../components/ParksDisplay.jsx';
 
 const mapStateToProps = state => ({
- parkNames: state.parks.parkNames
+ parkInfo: state.parks.parkInfo
   })
 
 
@@ -17,17 +17,17 @@ const mapStateToProps = state => ({
   });
 
   function ParksContainer (props) {
-    const {parkNames, fetchParkInfo} = props; 
-    console.log({parkNames})
+    const {parkInfo, fetchParkInfo} = props; 
+    console.log({parkInfo})
    useEffect(() => {
      fetchParkInfo()
    }, []);
 
-   // create empty array for park names to pass into display 
+
 
    const parkNamesArray = []
-   for (let i=0; i<parkNames.length; i++) {
-    parkNamesArray.push(<ParksDisplay name= {parkNames[i]}/>)
+   for (let i=0; i<parkInfo.length; i++) {
+    parkNamesArray.push(<ParksDisplay name= {parkInfo[i].names} image={parkInfo[i].images}  />)
    }
   
     return (

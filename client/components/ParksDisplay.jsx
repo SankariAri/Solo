@@ -7,9 +7,10 @@ const ParksDisplay = props => {
     return (
         <div className="displayBox"> 
         <h2>{props.name}</h2> 
+        <img src={props.image}/> 
         <h4>Add a Hike: <input type = "text"></input> 
         <button type ="button" onClick = {() => clicked(props)}> Add </button></h4>
-        <textarea cols="30" rows="10"> Add Park Notes Here </textarea> 
+        <textarea cols="30" rows="5"> Add Park Notes Here </textarea> 
         <div> <button type ="button" onClick = {() => clicked(props)}> Submit </button> </div>
         </div>
     )
