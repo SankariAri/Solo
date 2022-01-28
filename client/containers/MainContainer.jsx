@@ -7,7 +7,7 @@ function MainContainer () {
    return (
     <div className="container">
     <div className="outerBox">
-    <h1 id="header">National Parks Guide</h1>
+    <h1 id="header">National Parks Hike Planner</h1>
       <ParksContainer> </ParksContainer>
     </div>    
     </div>
